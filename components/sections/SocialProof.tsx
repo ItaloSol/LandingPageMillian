@@ -2,12 +2,45 @@
 
 import { Star, ShieldCheck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useState, useEffect } from "react";
 
 interface SocialProofProps {
   visibleSections: Set<string>;
 }
 
 export function SocialProof({ visibleSections }: SocialProofProps) {
+  const [count1500, setCount1500] = useState(0);
+  const [count98, setCount98] = useState(0);
+  const [visibleStars, setVisibleStars] = useState(0);
+  const duration = 2000; // Animation duration in milliseconds
+  const steps = 50; // Number of steps for the animation
+
+  useEffect(() => {
+    if (visibleSections.has('social-proof')) {
+      let startTime: number | null = null;
+      
+      const animate = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const percentage = Math.min(progress / duration, 1);
+
+        setCount1500(Math.floor(percentage * 1500));
+        setCount98(Math.floor(percentage * 98));
+        setVisibleStars(Math.min(Math.floor(percentage * 5 + 1), 5));
+
+        if (progress < duration) {
+          requestAnimationFrame(animate);
+        } else {
+          setCount1500(1500);
+          setCount98(98);
+          setVisibleStars(5);
+        }
+      };
+
+      requestAnimationFrame(animate);
+    }
+  }, [visibleSections]);
+
   return (
     <section id="social-proof" className={`bg-white py-16 px-4 fade-in ${visibleSections.has('social-proof') ? 'visible' : ''}`}>
       <div className="max-w-4xl mx-auto">
@@ -20,19 +53,30 @@ export function SocialProof({ visibleSections }: SocialProofProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="text-center p-6 bg-pink-50 rounded-lg">
-            <div className="text-4xl font-bold text-pink-600 mb-2">1500+</div>
+            <div className="text-4xl font-bold text-pink-600 mb-2">{count1500}+</div>
             <p className="text-gray-700">Kits vendidos</p>
           </div>
           <div className="text-center p-6 bg-pink-50 rounded-lg">
             <div className="flex justify-center mb-2">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 text-pink-600 fill-current" />
+                <Star 
+                  key={i} 
+                  className={`w-6 h-6 text-pink-600 fill-current transition-all duration-300 ${
+                    i < visibleStars 
+                      ? 'opacity-100 scale-100' 
+                      : 'opacity-0 scale-0'
+                  }`}
+                  style={{ 
+                    transitionDelay: `${i * 200}ms`,
+                    transform: i < visibleStars ? 'rotate(0deg)' : 'rotate(-180deg)'
+                  }}
+                />
               ))}
             </div>
             <p className="text-gray-700">4.9/5 de avaliação</p>
           </div>
           <div className="text-center p-6 bg-pink-50 rounded-lg">
-            <div className="text-4xl font-bold text-pink-600 mb-2">98%</div>
+            <div className="text-4xl font-bold text-pink-600 mb-2">{count98}%</div>
             <p className="text-gray-700">Clientes satisfeitas</p>
           </div>
         </div>

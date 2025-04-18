@@ -116,6 +116,37 @@
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
+/* Benefits Card Animation */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.benefit-card {
+  opacity: 0;
+}
+
+.benefit-card.animate-in {
+  animation: cardAppear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.benefit-icon {
+  opacity: 0;
+  transform: scale(0) rotate(-180deg);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.benefit-card.animate-in .benefit-icon {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
 /* Product Cards Animation */
 @keyframes cardFadeIn {
   from {
@@ -134,6 +165,45 @@
 
 .card-animation.visible {
   animation: cardFadeIn 0.4s ease-out forwards;
+}
+
+/* Pain Points Animation */
+@keyframes painPointFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes solutionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.pain-point-animation {
+  opacity: 0;
+}
+
+.pain-point-animation.visible {
+  animation: painPointFadeIn 0.5s ease-out forwards;
+}
+
+.solution-animation {
+  opacity: 0;
+}
+
+.solution-animation.visible {
+  animation: solutionFadeIn 0.5s ease-out forwards;
 }
 
 /* Benefit Icons Animation */

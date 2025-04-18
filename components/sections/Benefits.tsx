@@ -2,12 +2,37 @@
 
 import { Card } from "@/components/ui/card";
 import { Star, Shield, Sparkles, Heart } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 interface BenefitsProps {
   visibleSections: Set<string>;
 }
 
 export function Benefits({ visibleSections }: BenefitsProps) {
+  const benefitsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px'
+      }
+    );
+
+    const cards = benefitsRef.current?.querySelectorAll('.benefit-card');
+    cards?.forEach(card => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   const benefits = [
     { 
       icon: Shield, 
@@ -37,15 +62,22 @@ export function Benefits({ visibleSections }: BenefitsProps) {
         <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 fade-in ${visibleSections.has('benefits') ? 'visible' : ''}`}>
           Transforme seus cabelos com o poder do Kit Scandal
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={benefitsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
             <Card 
               key={index} 
-              className={`p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2 card-animation ${visibleSections.has('benefits') ? 'visible' : ''}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="benefit-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
+              style={{ 
+                animationDelay: `${index * 150}ms`
+              }}
             >
               <div className="flex flex-col items-center">
-                <benefit.icon className="w-12 h-12 text-pink-600 mb-4 icon-animation" />
+                <benefit.icon 
+                  className="benefit-icon w-12 h-12 text-pink-600 mb-4"
+                  style={{ 
+                    transitionDelay: `${(index * 150) + 300}ms`
+                  }}
+                />
                 <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.desc}</p>
               </div>

@@ -112,9 +112,11 @@ export function CTAFinal({ visibleSections, onWhatsAppClick }: CTAFinalProps) {
             </p>
           </div>
           
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-            <Timer className="w-4 h-4" />
-            <p>Oferta por tempo limitado, sujeita à disponibilidade do estoque</p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-sm text-gray-600 px-4 md:px-0">
+            <Timer className="w-4 h-4 flex-shrink-0" />
+            <p className="text-center">
+              Oferta por tempo limitado, sujeita à disponibilidade do estoque
+            </p>
           </div>
         </div>
       </div>
