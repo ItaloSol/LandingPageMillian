@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://millian.com.br/sitemap.xml
