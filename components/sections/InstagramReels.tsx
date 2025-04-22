@@ -59,13 +59,7 @@ export function InstagramReels({ visibleSections }: InstagramReelsProps) {
                   src={reel.embedUrl}
                   className="absolute inset-0 w-full h-full border-0"
                   allowFullScreen
-                  onLoad={() => setIsLoading(false)}
                 />
-                {isLoading && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-600"></div>
-                  </div>
-                )}
               </div>
             </Card>
           ))}

@@ -1,6 +1,7 @@
 'use client';
 
 import { Award, Shield, Sparkles, Users } from "lucide-react";
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -8,7 +9,17 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
+          <div className="flex items-center ">
+        <Image 
+          src="/logo.png" 
+          alt="Millian Cosméticos Logo" 
+          width={48} 
+          height={48} 
+          className="h-12 mb-6"
+          priority
+        />
             <h3 className="text-xl font-bold mb-4">Millian Cosméticos</h3>
+            </div>
             <p className="text-gray-300 mb-4">
               Elevar a autoestima da mulher moderna com soluções capilares seguras e de alta performance.
             </p>

@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://milliancosmetico.web.app/'),
   title: 'Kit Progressiva Sem Formol Scandal | Millian Cosméticos',
   description: 'Kit profissional para alisamento sem formol com fragrância exclusiva. Inclui Progressiva Scandal (1L), Máscara de Nutrição (500ml) e Óleo Reparador. Resultados duradouros e cabelos saudáveis.',
   keywords: 'progressiva sem formol, alisamento seguro, kit profissional, tratamento capilar, Millian Cosméticos, Scandal, hidratação capilar',
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Kit profissional para alisamento sem formol com fragrância exclusiva. Resultados duradouros e cabelos saudáveis.',
     images: [
       {
-        url: '/scandal-kit.webp',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Kit Progressiva Sem Formol Scandal'
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Kit Progressiva Sem Formol Scandal | Millian Cosméticos',
     description: 'Kit profissional para alisamento sem formol com fragrância exclusiva. Resultados duradouros e cabelos saudáveis.',
-    images: ['/scandal-kit.webp'],
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -51,7 +52,8 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta name="theme-color" content="#EC4899" />
-        <link rel="canonical" href="https://millian.com.br" />
+        <link rel="canonical" href="https://milliancosmetico.web.app/" />
+        <link rel="icon" href="/logo.ico" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

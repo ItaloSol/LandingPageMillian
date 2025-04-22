@@ -59,8 +59,8 @@ export default function Home() {
 
         <Hero visibleSections={visibleSections} onWhatsAppClick={handleWhatsAppClick} />
         <PainPoints visibleSections={visibleSections} />
-        <InstagramReels visibleSections={visibleSections} />
         <ProductPresentation visibleSections={visibleSections} />
+        <InstagramReels visibleSections={visibleSections} />
         <Benefits visibleSections={visibleSections} />
         <SocialProof visibleSections={visibleSections} />
         <FAQ visibleSections={visibleSections} />
