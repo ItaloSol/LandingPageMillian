@@ -6,6 +6,7 @@ import { PainPoints } from "@/components/sections/PainPoints";
 import { ProductPresentation } from "@/components/sections/ProductPresentation";
 import { Benefits } from "@/components/sections/Benefits";
 import { SocialProof } from "@/components/sections/SocialProof";
+import { InstagramReels } from "@/components/sections/InstagramReels";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 import { Footer } from "@/components/sections/Footer";
@@ -20,7 +21,11 @@ export default function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisibleSections((prev) => new Set(Array.from(prev).concat(entry.target.id as string)));
+            setVisibleSections((prev) => {
+              const newSet = new Set(prev);
+              newSet.add(entry.target.id as string);
+              return newSet;
+            });
           }
         });
       },
@@ -54,6 +59,7 @@ export default function Home() {
 
         <Hero visibleSections={visibleSections} onWhatsAppClick={handleWhatsAppClick} />
         <PainPoints visibleSections={visibleSections} />
+        <InstagramReels visibleSections={visibleSections} />
         <ProductPresentation visibleSections={visibleSections} />
         <Benefits visibleSections={visibleSections} />
         <SocialProof visibleSections={visibleSections} />

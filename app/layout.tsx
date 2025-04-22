@@ -50,7 +50,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="canonical" href="https://milliancosmetico.web.app/" />
+        <meta name="theme-color" content="#EC4899" />
+        <link rel="canonical" href="https://millian.com.br" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
