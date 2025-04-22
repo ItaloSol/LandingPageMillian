@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/seunumero?text=Olá! Gostaria de saber mais sobre o Kit Progressiva Sem Formol Scandal', '_blank');
+    window.open('https://wa.me/21997413052?text=Olá! Gostaria de saber mais sobre o Kit Progressiva Sem Formol Scandal', '_blank');
   };
 
   return (

@@ -51,7 +51,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <meta name="theme-color" content="#EC4899" />
         <link rel="canonical" href="https://milliancosmetico.web.app/" />
         <link rel="icon" href="/logo.ico" />
       </head>

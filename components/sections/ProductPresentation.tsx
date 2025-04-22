@@ -103,7 +103,7 @@ export function ProductPresentation({ visibleSections }: ProductPresentationProp
               <Button 
                 size="lg"
                 className="w-full min-h-[44px] bg-pink-600 hover:bg-pink-700 text-white py-4 md:py-6 text-base md:text-lg rounded-full shadow-lg hover:shadow-xl transition-all group"
-                onClick={() => window.open('https://wa.me/seunumero?text=Olá! Gostaria de comprar o Kit Completo Scandal', '_blank')}
+                onClick={() => window.open('https://wa.me/21997413052?text=Olá! Gostaria de comprar o Kit Completo Scandal', '_blank')}
               >
                 <ShoppingCart className="w-5 h-5 mr-2" />
                 Comprar Kit Completo com 30% OFF
@@ -161,7 +161,7 @@ export function ProductPresentation({ visibleSections }: ProductPresentationProp
 
               <Button 
                 className="w-full min-h-[44px] bg-pink-600 hover:bg-pink-700 text-white flex items-center justify-center gap-2 py-3" 
-                onClick={() => window.open('https://wa.me/seunumero?text=Olá! Gostaria de comprar a Progressiva Sem Formol Scandal', '_blank')}
+                onClick={() => window.open('https://wa.me/21997413052?text=Olá! Gostaria de comprar a Progressiva Sem Formol Scandal', '_blank')}
               >
                 <ShoppingCart className="w-5 h-5" />
                 Comprar Agora
@@ -203,7 +203,7 @@ export function ProductPresentation({ visibleSections }: ProductPresentationProp
 
               <Button 
                 className="w-full min-h-[44px] bg-pink-600 hover:bg-pink-700 text-white flex items-center justify-center gap-2 py-3" 
-                onClick={() => window.open('https://wa.me/seunumero?text=Olá! Gostaria de comprar a Máscara de Nutrição Scandal', '_blank')}
+                onClick={() => window.open('https://wa.me/21997413052?text=Olá! Gostaria de comprar a Máscara de Nutrição Scandal', '_blank')}
               >
                 <ShoppingCart className="w-5 h-5" />
                 Comprar Agora
@@ -249,7 +249,7 @@ export function ProductPresentation({ visibleSections }: ProductPresentationProp
 
               <Button 
                 className="w-full min-h-[44px] bg-pink-600 hover:bg-pink-700 text-white flex items-center justify-center gap-2 py-3" 
-                onClick={() => window.open('https://wa.me/seunumero?text=Olá! Gostaria de comprar o Óleo Reparador Scandal', '_blank')}
+                onClick={() => window.open('https://wa.me/21997413052?text=Olá! Gostaria de comprar o Óleo Reparador Scandal', '_blank')}
               >
                 <ShoppingCart className="w-5 h-5" />
                 Comprar Agora

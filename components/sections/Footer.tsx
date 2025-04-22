@@ -54,8 +54,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
             <div className="space-y-3 text-gray-300">
-              <p>Email: contato@millian.com.br</p>
-              <p>WhatsApp: (XX) XXXX-XXXX</p>
+              <p>WhatsApp: (21) 99741-3052</p>
               <p>Horário: Seg-Sex, 9h às 18h</p>
             </div>
           </div>
@@ -63,14 +62,11 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
             <div className="space-y-3">
-              <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition-colors">
+              <a target="_blank" rel="noopener" href="https://www.instagram.com/millianoficial/" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition-colors">
                 <span>Instagram</span>
               </a>
-              <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition-colors">
+              <a target="_blank" rel="noopener" href="https://www.facebook.com/milliancosmeticos" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition-colors">
                 <span>Facebook</span>
-              </a>
-              <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition-colors">
-                <span>YouTube</span>
               </a>
             </div>
           </div>
