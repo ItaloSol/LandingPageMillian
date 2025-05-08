@@ -45,6 +45,44 @@ export default function Home() {
 
   return (
     <>
+      {/* Fixed transparent modal for overdue payment warning */}
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 9999,
+        background: 'rgba(255,255,255,0.85)',
+        boxShadow: '0 2px 16px 0 rgba(0,0,0,0.08)',
+        backdropFilter: 'blur(2px)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '24px 8px 16px 8px',
+        pointerEvents: 'none',
+        animation: 'floatDown 2s cubic-bezier(0.23, 1, 0.32, 1)'
+      }}>
+        <div style={{
+          maxWidth: 480,
+          width: '100%',
+          textAlign: 'center',
+          color: '#b91c1c',
+          fontWeight: 600,
+          fontFamily: 'inherit',
+          background: 'rgba(255,255,255,0.95)',
+          borderRadius: 12,
+          border: '1px solid #fca5a5',
+          boxShadow: '0 2px 8px 0 rgba(185,28,28,0.08)',
+          padding: '16px 20px',
+          pointerEvents: 'auto',
+        }}>
+          <h2 style={{fontSize: '1.5rem', marginBottom: 8}}>Aviso de Pagamento em Atraso!</h2>
+          <p style={{fontSize: '1rem', marginBottom: 4}}>O projeto possui pendências financeiras que devem ser quitadas.</p>
+          <p style={{fontSize: '1rem'}}>Por favor, regularize o pagamento para restaurar o serviço.</p>
+        </div>
+        <style>{`@keyframes floatDown {0%{transform:translateY(-40px);opacity:0;}100%{transform:translateY(0);opacity:1;}}`}</style>
+      </div>
       <main className="min-h-screen bg-gradient-to-b from-pink-50 to-white" itemScope itemType="https://schema.org/Product">
         <meta itemProp="name" content="Kit Progressiva Sem Formol Scandal" />
         <meta itemProp="description" content="Kit profissional para alisamento sem formol com fragrância exclusiva. Inclui Progressiva Scandal (1L), Máscara de Nutrição (500ml) e Óleo Reparador." />
