@@ -67,7 +67,7 @@ export function InstagramReels({ visibleSections }: InstagramReelsProps) {
 
         <div className="text-center mt-8">
           <a 
-            href="https://www.instagram.com/millian.cosmeticos"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 transition-colors"

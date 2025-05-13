@@ -62,10 +62,10 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
             <div className="space-y-3">
-              <a target="_blank" rel="noopener" href="https://www.instagram.com/millianoficial/" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition-colors">
+              <a target="_blank" rel="noopener" href="#" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition-colors">
                 <span>Instagram</span>
               </a>
-              <a target="_blank" rel="noopener" href="https://www.facebook.com/milliancosmeticos" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition-colors">
+              <a target="_blank" rel="noopener" href="#" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition-colors">
                 <span>Facebook</span>
               </a>
             </div>
@@ -76,7 +76,7 @@ export function Footer() {
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Millian Cosméticos. Todos os direitos reservados.
             <br />
-            Desenvolvido por <a href="https://www.instagram.com/landingpagecraft/" className="text-pink-400 hover:text-pink-300 transition-colors" target="_blank" rel="noopener noreferrer">landingpagecraft</a>
+            Desenvolvido por <a href="#" className="text-pink-400 hover:text-pink-300 transition-colors" target="_blank" rel="noopener noreferrer">landingpagecraft</a>
           </p>
         </div>
       </div>

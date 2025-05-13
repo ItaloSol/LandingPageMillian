@@ -40,13 +40,13 @@ export default function Home() {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/21997413052?text=Olá! Gostaria de saber mais sobre o Kit Progressiva Sem Formol Scandal', '_blank');
+    window.open('# Gostaria de saber mais sobre o Kit Progressiva Sem Formol Scandal', '_blank');
   };
 
   return (
     <>
       {/* Fixed transparent modal for overdue payment warning */}
-      <div style={{
+     {/*  <div style={{
         position: 'fixed',
         top: 0,
         left: 0,
@@ -80,9 +80,9 @@ export default function Home() {
           <h2 style={{fontSize: '1.5rem', marginBottom: 8}}>Aviso de Pagamento em Atraso!</h2>
           <p style={{fontSize: '1rem', marginBottom: 4}}>O projeto possui pendências financeiras que devem ser quitadas.</p>
           <p style={{fontSize: '1rem'}}>Por favor, regularize o pagamento para restaurar o serviço.</p>
-        </div>
+        </div> 
         <style>{`@keyframes floatDown {0%{transform:translateY(-40px);opacity:0;}100%{transform:translateY(0);opacity:1;}}`}</style>
-      </div>
+      </div> */}
       <main className="min-h-screen bg-gradient-to-b from-pink-50 to-white" itemScope itemType="https://schema.org/Product">
         <meta itemProp="name" content="Kit Progressiva Sem Formol Scandal" />
         <meta itemProp="description" content="Kit profissional para alisamento sem formol com fragrância exclusiva. Inclui Progressiva Scandal (1L), Máscara de Nutrição (500ml) e Óleo Reparador." />

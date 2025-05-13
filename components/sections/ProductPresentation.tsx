@@ -103,7 +103,7 @@ export function ProductPresentation({ visibleSections }: ProductPresentationProp
               <Button 
                 size="lg"
                 className="w-full min-h-[44px] bg-pink-600 hover:bg-pink-700 text-white py-4 md:py-6 text-base md:text-lg rounded-full shadow-lg hover:shadow-xl transition-all group"
-                onClick={() => window.open('https://wa.me/21997413052?text=Olá! Gostaria de comprar o Kit Completo Scandal', '_blank')}
+                onClick={() => window.open('# Gostaria de comprar o Kit Completo Scandal', '_blank')}
               >
                 <ShoppingCart className="w-5 h-5 mr-2" />
                 Comprar Kit Completo com 30% OFF

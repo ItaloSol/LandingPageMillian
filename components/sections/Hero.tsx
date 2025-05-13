@@ -11,19 +11,15 @@ interface HeroProps {
 
 export function Hero({ visibleSections, onWhatsAppClick }: HeroProps) {
   return (
+    <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden" style={{backgroundImage: "url('/smoke.webp')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'screen'}}>
+       <div className="absolute inset-0 bg-gradient-to-r from-pink-50/90 to-white/90 z-0" />
     <section
       id="hero"
-      className="relative py-20 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden"
-      style={{
-        backgroundImage: "url('/smoke.webp')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundBlendMode: 'screen',
-
-      }}
+      className="relative py-20 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto overflow-visible" 
     >
+      
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-pink-50/90 to-white/90 z-0" />
+     
 
       <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div
@@ -89,5 +85,6 @@ export function Hero({ visibleSections, onWhatsAppClick }: HeroProps) {
         </div>
       </div>
     </section>
+  </div>
   );
 }
